@@ -9,6 +9,7 @@ Console.WriteLine("------------------------\n");
 // Ask the user to type the first number.
 //Més comentaris
 //I més comentaris
+//I un altre més
 Console.WriteLine("Type a number, and then press Enter");
 num1 = Convert.ToInt32(Console.ReadLine());
 
