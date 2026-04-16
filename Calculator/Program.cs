@@ -47,3 +47,4 @@ Console.ReadKey();
 //Afig comentari per a fer un commit inicial
 //Comentari al final del codi
 //Ja està quasi
+//altra vegada
