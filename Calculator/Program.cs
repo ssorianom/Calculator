@@ -40,3 +40,4 @@ switch (Console.ReadLine())
 // Wait for the user to respond before closing.
 Console.Write("Press any key to close the Calculator console app...");
 Console.ReadKey();
+//Afig comentari per a fer un commit inicial
