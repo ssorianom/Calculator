@@ -46,3 +46,4 @@ Console.Write("Press any key to close the Calculator console app...");
 Console.ReadKey();
 //Afig comentari per a fer un commit inicial
 //Comentari al final del codi
+//Ja està quasi
