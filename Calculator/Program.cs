@@ -2,12 +2,12 @@
 int num1 = 0; int num2 = 0;
 
 //NOu comentari per a incloure en la documentació
-//Altra vegada comente
 // Display title as the C# console calculator app.
 Console.WriteLine("Console Calculator in C#\r");
 Console.WriteLine("------------------------\n");
 
 // Ask the user to type the first number.
+//Més comentaris
 Console.WriteLine("Type a number, and then press Enter");
 num1 = Convert.ToInt32(Console.ReadLine());
 
