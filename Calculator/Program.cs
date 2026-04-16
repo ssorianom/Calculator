@@ -2,6 +2,7 @@
 int num1 = 0; int num2 = 0;
 
 //NOu comentari per a incloure en la documentació
+//Altra vegada comente
 // Display title as the C# console calculator app.
 Console.WriteLine("Console Calculator in C#\r");
 Console.WriteLine("------------------------\n");
