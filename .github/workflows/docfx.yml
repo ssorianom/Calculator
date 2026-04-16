@@ -1,51 +1,30 @@
-name: Build and Deploy DocFX
+name: Generar documentación
 
 on:
-push:
-branches:
-- main
+  push:
+    branches: [ main ]
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build-docs:
+    runs-on: windows-latest
 
-```
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v3
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v3
 
-  - name: Setup .NET
-    uses: actions/setup-dotnet@v3
-    with:
-      dotnet-version: '8.0.x'
+    - name: Instalar .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
 
-  - name: Install DocFX
-    run: dotnet tool install -g docfx
+    - name: Instalar DocFX
+      run: dotnet tool install -g docfx
 
-  - name: Build documentation
-    run: docfx docfx.json
+    - name: Generar documentación
+      run: docfx docfx_project/docfx.json
 
-  - name: Upload artifact
-    uses: actions/upload-artifact@v4
-    with:
-      name: site
-      path: _site
-```
-
-deploy:
-needs: build
-runs-on: ubuntu-latest
-
-```
-steps:
-  - name: Download artifact
-    uses: actions/download-artifact@v4
-    with:
-      name: site
-
-  - name: Deploy to GitHub Pages
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      publish_dir: ./_site
-```
+    - name: Publicar en GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docfx_project/_site
